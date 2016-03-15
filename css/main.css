@@ -2,7 +2,6 @@
 
 body {
 	background-color: #ffffff;
-	max-width: auto;
 }
 
 .content-wrapper {
@@ -17,9 +16,50 @@ a:link {
 	text-decoration: none;
 }
 
-.header-top-line a:link {
+.header-top-line a:link::first-child {
 	color: #29bdca;
 	text-decoration: underline;
+}
+
+.navigation > a:link {
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 0 14px;
+}
+
+.navigation > a:link:first-child {
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 0 14px 0 0;
+}
+
+.menu > a:link {
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 0 2px;
+}
+
+.menu > a:link:first-child {
+	background-color: #29bdca;
+	color: #ffffff;
+}
+
+.portfolio-list a:link {
+	color: #29bdca;
+	text-transform: capitalize;
+} 
+
+/*datetime properties*/
+
+time {
+	font-color: #808080;
+	font-size: 12px;
+}
+
+/*common properties*/
+
+.social-networks-list > *:first-child {
+	margin: 0;
 }
 
 /*
@@ -72,7 +112,7 @@ a:link {
 	margin: 0 0 0 20px;
 }
 
-.social-networks-list > * {
+.header-top-line .social-networks-list > * {
 	height: 30px;
 	width: 30px;
 	background-color: #e5e5e5;
@@ -83,11 +123,6 @@ a:link {
 	align-items: center;
 }
 
-.social-networks-list > *:first-child {
-	margin: 0;
-}
-
-
 /*second line properties*/
 
 .header-second-line {
@@ -95,6 +130,7 @@ a:link {
 	font-size: 15px;
 	height: 140px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -104,17 +140,6 @@ h1:first-letter {
 	font-weight: bolder;
 	color: #ffffff;
 	background-color: #29bdca;
-}
-
-.navigation > a:link {
-	font-size: 13px;
-	text-decoration: none;
-	text-transform: uppercase;
-	margin: 0 14px;
-}
-
-.navigation > *.first-child {
-	margin: 0;
 }
 
 .navigation {
@@ -190,6 +215,151 @@ h1:first-letter {
 *
 *
 * mainmatter properties
+*
+*
+*
+*
+*
+*/
+
+/*menu properties*/
+
+.menu {
+	background-color: #f2f2f2;
+	height: 45px;
+	margin: 45px auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.menu > * {
+	padding: 11px 14px;
+	display: inline-flex;
+	align-items: center;
+}
+
+/*portfolio properties*/
+
+.portfolio-list {
+	font-size: 18px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+}
+
+.portfolio-list > * {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 5px 30px 0;
+}
+
+#fill-list-item {
+	order: 9;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 925px) {
+	.portfolio-list {
+		justify-content: space-around;
+	}
+	#fill-list-item {
+		order: 9;
+		visibility: collapse;
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 910px) {
+	.portfolio-list > li:nth-child(3n+1) {
+		margin: 0 0 30px 0;
+	}
+}
+
+/*mainmatter first bottom line properties*/
+
+.mainmatter-first-bottom-line {
+	height: 110px;
+	font-size: 20px;
+	background-color: #cbf1f4;
+	color: #2095b2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items:center;
+}
+
+.mainmatter-first-bottom-line > button {
+	height: 40px;
+	width: 170px;
+	background-color: #1c818a; 
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 17px;
+	font-weight: bold;
+	margin: 0 0 0 10px;
+	border-radius: 3px;
+	border-style: none;
+}
+
+/*mainmatter second bottom line properties*/
+
+.mainmatter-second-bottom-line {
+	height: 110px;
+	font-size: 25px;
+	background-color: #29bdca;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.mainmatter-second-bottom-line > * {
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.mainmatter-second-bottom-line .social-networks-list {
+	height: 40px;
+	width: 163px;
+	font: normal normal normal 15px FontAwesome;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.mainmatter-second-bottom-line .social-networks-list > * {
+	height: 40px;
+	width: 163px;
+	background-color: #2095a0;
+	margin: 0 0 0 1px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mainmatter-second-bottom-line a:link {
+	color: #ffffff;
+}
+
+/*
+*
+*
+*
+*
+*
+* footer properties
 *
 *
 *
