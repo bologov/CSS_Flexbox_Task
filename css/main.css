@@ -101,6 +101,7 @@ a {
 .portfolioList a {
 	/*Font*/
 	color: #29bdca;
+	font-size: 18px;
 
 	/*Text*/
 	text-transform: capitalize;
@@ -327,9 +328,6 @@ time {
 
 	/*Table*/
 	list-style: none;
-
-	/*Font*/
-	font-size: 18px;
 }
 
 .portfolioList > * {
